@@ -1,9 +1,25 @@
-var xx = document.getElementsByClassName("list-group-item");
-xx[0].style.backgroundColor = 'green';
-xx[1].style.backgroundColor="gray";
-var tt = document.querySelector(".list-group-item:nth-child(2)");
-tt.style.color='green';
-var txt = document.querySelectorAll("li:nth-child(odd)");
-for (var i=0; i<txt.length; i++){
-    txt[i].style.backgroundColor= "green";
-}
+var xx = document.querySelector("#items");
+console.log(xx.parentElement);
+xx.parentElement.style.backgroundColor = "blue";
+var pp = document.querySelector("#items");
+console.log(pp.lastChild);
+pp.lastElementChild.style.color = "#0FAD99";
+pp.firstElementChild.textContent = "Hey Look here i am ITEM-1";
+console.log(pp.firstChild);
+console.log(pp.nextSibling);
+console.log(pp.nextElementSibling);
+console.log(pp.previousSibling);
+pp.previousElementSibling.style.color="#7DB436";
+var rak = document.createElement('div');
+rak.className = "new li class";
+console.log(rak);
+//rak.setAttribute('title',"new item added");
+var neww = document.createTextNode("i am new div");
+rak.appendChild(neww);
+var a = document.querySelector('header .container');
+var b = document.querySelector('header h1');
+a.insertBefore(neww, b);
+var g = document.getElementById('items');
+console.log(g);
+g.innerHTML = '<li>"hello world"</li>' + g.innerHTML;
+console.log(g.innerHTML);
